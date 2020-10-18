@@ -68,6 +68,7 @@ dependencies {
     implementation(DaggerLib.dagger)
     implementation(DaggerLib.daggerSupport)
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
     kapt(DaggerLib.daggerCompiler)
     kapt(DaggerLib.daggerProcessor)
 
