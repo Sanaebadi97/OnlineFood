@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvvm.feature.view.fragment.FoodDetailsFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_food_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_profile_size"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/text_food_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_five_fourth"
+        android:layout_marginTop="@dimen/default_margin_five_fourth"
+        android:layout_marginEnd="@dimen/default_margin_five_fourth"
+        android:fontFamily="@font/iransans_bold"
+        android:text="خوراک مرغ تند"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_huge"
+        app:layout_constraintTop_toBottomOf="@id/image_food_details" />
+
+    <TextView
+        android:id="@+id/text_food_cost"
+        android:layout_width="@dimen/image_profile_size"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:background="@drawable/cost_bg"
+        android:fontFamily="@font/iransans_medium"
+        android:gravity="center"
+        android:paddingStart="@dimen/default_margin"
+        android:paddingTop="@dimen/default_margin_half"
+        android:paddingEnd="@dimen/default_margin"
+        android:paddingBottom="@dimen/default_margin_half"
+        android:text="قیمت 45000 تومان"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_food_name" />
+
+    <TextView
+        android:id="@+id/text_food_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:padding="@dimen/default_margin"
+        android:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و  مجله
+ در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_food_cost"
+        app:layout_goneMarginTop="@dimen/default_margin" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin_triple"
+        android:layout_marginEnd="@dimen/default_margin_triple"
+        android:background="@drawable/cost_bg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large"
+        android:text="@string/add_to_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_food_details" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
