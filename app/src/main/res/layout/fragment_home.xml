@@ -7,24 +7,14 @@
     android:layoutDirection="rtl"
     tools:context=".mvvm.feature.view.fragment.HomeFragment">
 
-    <include
-        layout="@layout/main_toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:elevation="2dp"
-        app:itemBackground="@android:color/white"
-        app:itemIconSize="24dp"
-        app:itemRippleColor="@color/gray"
-        app:itemTextColor="@color/gray"
+        android:text="@string/home"
+        android:textSize="@dimen/text_size_very_huge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu_bottom_navigation" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

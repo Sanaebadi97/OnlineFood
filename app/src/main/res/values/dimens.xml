@@ -24,5 +24,6 @@
     <dimen name="text_size_middle_huge">24sp</dimen>
     <dimen name="text_size_very_huge">28sp</dimen>
     <dimen name="icon_size">50dp</dimen>
+    <dimen name="image_profile_size">200dp</dimen>
 
 </resources>
