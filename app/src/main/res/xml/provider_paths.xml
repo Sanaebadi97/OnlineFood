@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <cache-path
+        name="tmp"
+        path="tmp/" />
+
+
+    <external-path name="my_images" path="."/>
+</paths>
