@@ -1,3 +1,3 @@
-package info.sanaebadi.data.exception
+package com.awizhe.data.exception
 
 class NoDataException : Exception()

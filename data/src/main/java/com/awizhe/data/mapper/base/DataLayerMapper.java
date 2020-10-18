@@ -1,7 +1,7 @@
 package com.awizhe.data.mapper.base;
 
 
-import info.sanaebadi.data.entity.base.BaseEntity;
+import com.awizhe.data.entity.base.BaseEntity;
 import info.sanaebadi.domain.model.base.BaseDomainModel;
 
 public interface DataLayerMapper<E extends BaseEntity, D extends BaseDomainModel> {

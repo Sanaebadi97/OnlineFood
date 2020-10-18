@@ -1,5 +1,5 @@
 
-package info.sanaebadi.data.executor
+package com.awizhe.data.executor
 
 
 import info.sanaebadi.domain.executor.ThreadExecutor

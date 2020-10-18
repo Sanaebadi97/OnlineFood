@@ -1,4 +1,4 @@
-package info.sanaebadi.data.cache.base
+package com.awizhe.data.cache.base
 
 import io.reactivex.Completable
 import io.reactivex.Maybe

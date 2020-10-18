@@ -1,4 +1,4 @@
-package info.sanaebadi.data.entity.base
+package com.awizhe.data.entity.base
 
 
 abstract class ListBaseEntity<T : BaseEntity> : BaseEntity {

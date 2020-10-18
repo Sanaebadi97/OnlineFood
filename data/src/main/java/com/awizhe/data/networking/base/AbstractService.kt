@@ -1,6 +1,6 @@
-package info.sanaebadi.data.networking.base
+package com.awizhe.data.networking.base
 
-import info.sanaebadi.data.BuildConfig
+import com.awizhe.data.BuildConfig
 import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

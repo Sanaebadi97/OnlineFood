@@ -3,7 +3,7 @@
 //import info.sanaebadi.data.entity.place.favorite.FavoriteEntity
 //import info.sanaebadi.data.entity.place.places.PlaceListEntity
 //import info.sanaebadi.data.entity.place.promoted.PromotedListEntity
-//import info.sanaebadi.data.networking.base.AbstractService
+//import com.awizhe.data.networking.base.AbstractService
 //import info.sanaebadi.data.networking.retrofit.PlaceApiRetrofitService
 //import info.sanaebadi.data.repository.dataSource.place.PlaceDataSource
 //import io.reactivex.Single

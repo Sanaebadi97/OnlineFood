@@ -1,33 +1,76 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    id(BuildPlugins.javaLibraryPlugin)
-    id(BuildPlugins.kotlinPlugin)
+    id(BuildPlugins.androidLibrary)
+    id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.kotlinAndroidExtensions)
     id(BuildPlugins.kaptPlugin)
+}
+android {
+    compileSdkVersion(AndroidSdk.compileSdk)
+    defaultConfig {
+        minSdkVersion(AndroidSdk.minSdk)
+        targetSdkVersion(AndroidSdk.targetSdk)
+        versionCode = 1
+        versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
+    flavorDimensions ("PlaceApp")
+    productFlavors {
+        create("tapsi") {
+            setDimension("PlaceApp")
+            buildConfigField("String", "API_BASE_URL", "\"http://tapsi.docker.webdooz.com/api/v1/\"")
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    // For Kotlin projects
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
 }
 
 
 dependencies {
+    implementation(project(mapOf("path" to ":domain")))
+
     implementation(Libraries.kotlinStdLib)
-    implementation(RXLibraries.rxAndroid)
-    implementation(RXLibraries.rxJava)
-    implementation(Libraries.arrow)
+    implementation(Libraries.ktxCore)
 
     implementation(DaggerLib.dagger)
     implementation(DaggerLib.daggerSupport)
     kapt(DaggerLib.daggerCompiler)
     kapt(DaggerLib.daggerProcessor)
 
+    implementation(Networking.retrofit)
+    implementation(Networking.rxRetrofitAdapter)
+    implementation(Networking.converterScalars)
+    implementation(Networking.converterMoshi)
+    api(Networking.moshi)
+    kapt(Networking.moshiKotlin)
+
     implementation(RXLibraries.rxAndroid)
     implementation(RXLibraries.rxJava)
-    implementation(RXLibraries.rxKotlin)
 
     testImplementation(TestLibraries.junit4)
+    androidTestImplementation(TestLibraries.testRunner)
+    androidTestImplementation(TestLibraries.espresso)
     testImplementation(TestLibraries.mockitoKotlin)
-}
 
 
-// compile bytecode to java 8 (default is java 6)
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
 }

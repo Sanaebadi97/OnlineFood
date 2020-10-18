@@ -1,3 +1,3 @@
-package info.sanaebadi.data.entity.base
+package com.awizhe.data.entity.base
 
 interface BaseEntity
