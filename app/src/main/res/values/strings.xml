@@ -13,4 +13,12 @@
     <string name="info_sanaebadi_info">info@sanaebadi.info</string>
     <string name="add_to_card">افزودن به سبد خرید</string>
     <string name="pay_and_post">پرداخت و ارسال</string>
+    <string name="ticket_title">عنوان</string>
+    <string name="enter_ticket_title">عنوان را وارد کنید ...</string>
+    <string name="ticket_content">متن تیکت</string>
+    <string name="enter_ticket_content">متن تیکت را وارد کنید ...</string>
+    <string name="ticket_notes">نکته ها:</string>
+    <string name="tickets_notes"></string>
+
+
 </resources>

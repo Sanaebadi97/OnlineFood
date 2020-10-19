@@ -12,4 +12,7 @@
     <color name="gray">#555555</color>
 
     <color name="light_pink">#efefef</color>
+
+    <color name="light_gray">#dadada</color>
+
 </resources>

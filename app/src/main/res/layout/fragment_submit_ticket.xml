@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".mvvm.feature.view.fragment.setting.SubmitTicketFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_ticket_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_double"
+        android:layout_marginEnd="@dimen/default_margin_double"
+        android:fontFamily="@font/iransans_bold"
+        android:text="@string/ticket_title"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_huge"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_ticket_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/default_margin_double"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin_double"
+        android:background="@drawable/ticket_bg"
+        android:fontFamily="@font/iransans_medium"
+        android:hint="@string/enter_ticket_title"
+        android:maxEms="50"
+        android:maxLength="50"
+        android:padding="@dimen/default_margin_half"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toBottomOf="@id/text_ticket_title_label" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_ticket_content_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_double"
+        android:layout_marginEnd="@dimen/default_margin_double"
+        android:fontFamily="@font/iransans_bold"
+        android:text="@string/ticket_content"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_huge"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_ticket_title" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_ticket_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_profile_size"
+        android:layout_marginStart="@dimen/default_margin_double"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin_double"
+        android:background="@drawable/ticket_bg"
+        android:fontFamily="@font/iransans_medium"
+        android:gravity="top|right"
+        android:hint="@string/enter_ticket_content"
+        android:maxEms="200"
+        android:maxLength="200"
+        android:padding="@dimen/default_margin_half"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toBottomOf="@id/text_ticket_content_label" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_ticket_notes_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_double"
+        android:layout_marginEnd="@dimen/default_margin_double"
+        android:fontFamily="@font/iransans_bold"
+        android:text="@string/ticket_notes"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_huge"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_ticket_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_margin"
+        android:text="
+- لطفا درخواست خودتون رو با جزئیات کامل بیان کنید.\n
+- لطفا درخواست خودتون رو با حروف فارسی ارسال کنید.\n
+- تیکت ها در تایم کاری معمولا کمتر از یک ساعت
+ پاسخ داده میشوند.
+"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toBottomOf="@id/text_ticket_notes_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
