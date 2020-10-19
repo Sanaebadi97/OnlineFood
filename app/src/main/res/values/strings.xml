@@ -18,7 +18,7 @@
     <string name="ticket_content">متن تیکت</string>
     <string name="enter_ticket_content">متن تیکت را وارد کنید ...</string>
     <string name="ticket_notes">نکته ها:</string>
-    <string name="tickets_notes"></string>
+    <string name="send_ticket">ارسال تیکت</string>
 
 
 </resources>
