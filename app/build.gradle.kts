@@ -50,6 +50,7 @@ dependencies {
     implementation(Libraries.ktxCore)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.material)
+    implementation(Libraries.slider)
 
     implementation(Libraries.glide)
     implementation(Libraries.glideCompiler)

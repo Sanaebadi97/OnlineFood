@@ -1,60 +1,94 @@
 package com.awizhe.food.mvvm.feature.view.fragment.navigation
 
+
+import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.awizhe.food.R
+import com.awizhe.food.databinding.FragmentHomeBinding
+import com.awizhe.food.model.SliderItem
+import com.awizhe.food.mvvm.feature.view.adapter.SliderAdapter
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
+import com.smarteist.autoimageslider.SliderAnimations
+import com.smarteist.autoimageslider.SliderView
+import dagger.android.support.DaggerFragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class HomeFragment : DaggerFragment() {
+
+    private lateinit var binding: FragmentHomeBinding
+    private lateinit var sliderAdapter: SliderAdapter
+    private val sliderItemList: MutableList<SliderItem> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        sliderAdapter = SliderAdapter(getSliderItem())
+        sliderConfig()
+
+
+    }
+
+    private fun sliderConfig() {
+        binding.imageSlider.setSliderAdapter(sliderAdapter!!)
+        binding.imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM) //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        binding.imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
+        binding.imageSlider.autoCycleDirection = SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH
+        binding.imageSlider.indicatorSelectedColor = Color.WHITE
+        binding.imageSlider.indicatorUnselectedColor = Color.GRAY
+        binding.imageSlider.scrollTimeInSec = 4
+        binding.imageSlider.isAutoCycle = true
+        binding.imageSlider.startAutoCycle()
+
+
+        binding.imageSlider.setOnIndicatorClickListener {
+            Log.i(
+                "GGG",
+                "onIndicatorClicked: " + binding.imageSlider.currentPagePosition
+            )
+        }
+    }
+
+    private fun getSliderItem(): MutableList<SliderItem> {
+        sliderItemList.add(
+            SliderItem(
+                "https://wallpapershome.com/images/pages/pic_h/954.jpg",
+                "میگو پلو"
+            )
+        )
+        sliderItemList.add(
+            SliderItem(
+                "https://wallpapershome.com/images/pages/ico_h/952.jpg",
+                "قلیه ماهی"
+            )
+        )
+        sliderItemList.add(
+            SliderItem(
+                "https://wallpapershome.com/images/pages/ico_h/815.jpg",
+                "صدف و جلبک"
+            )
+        )
+        sliderItemList.add(
+            SliderItem(
+                "https://wallpapershome.com/images/pages/ico_h/954.jpg",
+                "خرچنگ آبپز"
+            )
+        )
+
+        return sliderItemList
     }
 }

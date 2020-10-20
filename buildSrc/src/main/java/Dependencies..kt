@@ -38,6 +38,7 @@ object Libraries {
         const val materialVersion = "1.3.0-alpha02"
         const val arrowVersion = "1.0.0"
         const val glideVersion = "4.11.0"
+        const val sliderVersion = "1.4.0"
 
     }
 
@@ -50,6 +51,7 @@ object Libraries {
     const val arrow = "com.fernandocejas:arrow:${Versions.arrowVersion}"
     const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
+    const val slider = "com.github.smarteist:autoimageslider:${Versions.sliderVersion}"
 
 
 }
