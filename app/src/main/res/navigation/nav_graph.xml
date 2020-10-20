@@ -10,4 +10,14 @@
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
