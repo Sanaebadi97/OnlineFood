@@ -1,36 +1,56 @@
 package com.awizhe.food.mvvm.feature.view.adapter
 
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import com.awizhe.food.R
+import com.awizhe.food.databinding.SliderItemBinding
+import com.awizhe.food.model.SliderItem
+import com.awizhe.food.util.loadUrl
 import com.smarteist.autoimageslider.SliderViewAdapter
 
 
 public class SliderAdapter : SliderViewAdapter<SliderAdapter.SliderAdapterVH>() {
 
 
-    class SliderAdapterVH(itemView: View) : ViewHolder(itemView) {
-        lateinit var itemView: View
-        var imageViewBackground: ImageView = itemView.findViewById(R.id.iv_auto_image_slider)
-        var imageGifContainer: ImageView = itemView.findViewById(R.id.iv_gif_container)
-        var textViewDescription: TextView = itemView.findViewById(R.id.tv_auto_image_slider)
+    private var mSliderItems: MutableList<SliderItem> = ArrayList()
 
-        init {
-            this.itemView = itemView
-        }
+    fun renewItems(sliderItems: MutableList<SliderItem>) {
+        this.mSliderItems = sliderItems
+        notifyDataSetChanged()
     }
 
-    override fun getCount(): Int {
-        TODO("Not yet implemented")
+    fun deleteItem(position: Int) {
+        this.mSliderItems.removeAt(position)
+        notifyDataSetChanged()
     }
+
+    fun addItem(sliderItem: SliderItem?) {
+        this.mSliderItems.add(sliderItem!!)
+        notifyDataSetChanged()
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup?): SliderAdapterVH {
         TODO("Not yet implemented")
     }
 
+
+    override fun getCount(): Int {
+        TODO("Not yet implemented")
+    }
+
     override fun onBindViewHolder(viewHolder: SliderAdapterVH?, position: Int) {
         TODO("Not yet implemented")
+    }
+
+    class SliderAdapterVH(private val binding: SliderItemBinding) : ViewHolder(binding.root) {
+
+        fun bind(sliderItem: SliderItem, listener: (SliderItem) -> Unit) =
+            with(itemView) {
+                binding.imageSlider.loadUrl(sliderItem.foodImageUrl)
+                binding.textSlider.text = sliderItem.foodName
+
+                setOnClickListener {
+                    listener(SliderItem(sliderItem.foodImageUrl, sliderItem.foodName))
+                }
+            }
     }
 }
