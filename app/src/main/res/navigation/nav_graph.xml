@@ -9,15 +9,32 @@
         android:id="@+id/homeFragment"
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bookmarkFragment"
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.BookmarkFragment"
         android:label="fragment_bookmark"
-        tools:layout="@layout/fragment_bookmark" />
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_messageFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>
