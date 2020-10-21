@@ -2,7 +2,9 @@ package com.awizhe.data.entity.food
 
 import com.awizhe.data.entity.base.BaseEntity
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class FoodEntity(
 
     @Json(name = "fooddiscount")
