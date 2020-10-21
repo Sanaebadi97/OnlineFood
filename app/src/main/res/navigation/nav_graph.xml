@@ -3,38 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/home_fragment">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/home_fragment"
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_bookmarkFragment"
-            app:destination="@id/bookmarkFragment" />
+            app:destination="@id/bookmark_fragment" />
     </fragment>
     <fragment
-        android:id="@+id/bookmarkFragment"
+        android:id="@+id/bookmark_fragment"
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.BookmarkFragment"
         android:label="fragment_bookmark"
         tools:layout="@layout/fragment_bookmark" >
         <action
             android:id="@+id/action_bookmarkFragment_to_messageFragment"
-            app:destination="@id/messageFragment" />
+            app:destination="@id/message_fragment" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/profile_fragment"
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/messageFragment"
+        android:id="@+id/message_fragment"
         android:name="com.awizhe.food.mvvm.feature.view.fragment.navigation.MessageFragment"
         android:label="fragment_message"
+
         tools:layout="@layout/fragment_message" >
         <action
             android:id="@+id/action_messageFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profile_fragment" />
     </fragment>
 </navigation>
