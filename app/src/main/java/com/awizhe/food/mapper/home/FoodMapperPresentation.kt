@@ -28,10 +28,10 @@ class FoodMapperPresentation @Inject constructor() :
         )
     }
 
-    fun toPresentation(mFoodList: FoodList): FoodListPresentation {
+    fun toPresentation(mFoodList: List<Food>): FoodListPresentation {
         val itemPresentationList: MutableList<FoodPresentation> = ArrayList<FoodPresentation>()
 
-        for (food: Food in mFoodList.foodList!!) {
+        for (food: Food in mFoodList) {
             itemPresentationList.add(toPresentation(food))
         }
 

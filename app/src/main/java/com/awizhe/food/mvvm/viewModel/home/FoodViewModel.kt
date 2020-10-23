@@ -3,6 +3,7 @@ package com.awizhe.food.mvvm.viewModel.home
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.awizhe.domain.interactor.home.FoodUseCase
+import com.awizhe.domain.model.home.Food
 import com.awizhe.domain.model.home.FoodList
 import com.awizhe.food.mapper.home.FoodMapperPresentation
 import com.awizhe.food.model.home.FoodListPresentation
@@ -22,8 +23,8 @@ class FoodViewModel @Inject constructor(
         value.setLoading(true)
         foodList.postValue(value)
 
-        userCase.execute(object : BaseSingleObserver<FoodList>() {
-            override fun onSuccess(t: FoodList) {
+        userCase.execute(object : BaseSingleObserver<List<Food>>() {
+            override fun onSuccess(t: List<Food>) {
                 super.onSuccess(t)
                 value.setLoading(false)
                 value.setThrowable(null)
