@@ -3,7 +3,7 @@ package com.awizhe.food.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.awizhe.food.mvvm.feature.base.ViewModelFactory
-import com.awizhe.food.mvvm.viewModel.food.FoodViewModel
+import com.awizhe.food.mvvm.viewModel.home.FoodViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

@@ -1,10 +1,10 @@
-package com.awizhe.food.mapper.food
+package com.awizhe.food.mapper.home
 
-import com.awizhe.domain.model.food.Food
-import com.awizhe.domain.model.food.FoodList
+import com.awizhe.domain.model.home.Food
+import com.awizhe.domain.model.home.FoodList
 import com.awizhe.food.mapper.base.PresentationLayerMapper
-import com.awizhe.food.model.food.FoodListPresentation
-import com.awizhe.food.model.food.FoodPresentation
+import com.awizhe.food.model.home.FoodListPresentation
+import com.awizhe.food.model.home.FoodPresentation
 import javax.inject.Inject
 
 class FoodMapperPresentation @Inject constructor() :

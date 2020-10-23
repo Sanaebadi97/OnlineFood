@@ -1,6 +1,6 @@
-package com.awizhe.domain.repository.food
+package com.awizhe.domain.repository.home
 
-import com.awizhe.domain.model.food.FoodList
+import com.awizhe.domain.model.home.FoodList
 import io.reactivex.Single
 
 interface FoodRepository {

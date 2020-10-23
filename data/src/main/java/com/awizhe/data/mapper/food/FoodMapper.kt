@@ -3,8 +3,8 @@ package com.awizhe.data.mapper.food
 import com.awizhe.data.entity.food.FoodEntity
 import com.awizhe.data.entity.food.FoodListEntity
 import com.awizhe.data.mapper.base.DataLayerMapper
-import com.awizhe.domain.model.food.Food
-import com.awizhe.domain.model.food.FoodList
+import com.awizhe.domain.model.home.Food
+import com.awizhe.domain.model.home.FoodList
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton

@@ -1,7 +1,7 @@
-package com.awizhe.domain.interactor.food
+package com.awizhe.domain.interactor.home
 
-import com.awizhe.domain.model.food.FoodList
-import com.awizhe.domain.repository.food.FoodRepository
+import com.awizhe.domain.model.home.FoodList
+import com.awizhe.domain.repository.home.FoodRepository
 import info.sanaebadi.domain.executor.PostExecutionThread
 import info.sanaebadi.domain.executor.ThreadExecutor
 import info.sanaebadi.domain.interactor.base.SingleUseCase

@@ -1,9 +1,9 @@
-package com.awizhe.food.mvvm.feature.view.adapter
+package com.awizhe.food.mvvm.feature.view.adapter.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.awizhe.food.databinding.SliderItemBinding
-import com.awizhe.food.model.SliderItem
+import com.awizhe.food.model.home.SliderItem
 import com.awizhe.food.util.loadUrl
 import com.smarteist.autoimageslider.SliderViewAdapter
 

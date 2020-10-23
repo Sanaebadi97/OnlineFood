@@ -1,4 +1,4 @@
-package com.awizhe.domain.model.food
+package com.awizhe.domain.model.home
 
 import info.sanaebadi.domain.model.base.BaseDomainModel
 

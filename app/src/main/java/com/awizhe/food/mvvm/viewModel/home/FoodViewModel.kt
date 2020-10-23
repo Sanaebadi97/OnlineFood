@@ -1,11 +1,11 @@
-package com.awizhe.food.mvvm.viewModel.food
+package com.awizhe.food.mvvm.viewModel.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.awizhe.domain.interactor.food.FoodUseCase
-import com.awizhe.domain.model.food.FoodList
-import com.awizhe.food.mapper.food.FoodMapperPresentation
-import com.awizhe.food.model.food.FoodListPresentation
+import com.awizhe.domain.interactor.home.FoodUseCase
+import com.awizhe.domain.model.home.FoodList
+import com.awizhe.food.mapper.home.FoodMapperPresentation
+import com.awizhe.food.model.home.FoodListPresentation
 import com.awizhe.food.mvvm.viewModel.base.MutableViewModel
 import info.sanaebadi.domain.interactor.base.BaseSingleObserver
 import javax.inject.Inject

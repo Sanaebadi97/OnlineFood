@@ -1,9 +1,9 @@
 package com.awizhe.data.repository.dataSource.food
 
 import com.awizhe.data.mapper.food.FoodMapper
-import com.awizhe.domain.model.food.FoodList
+import com.awizhe.domain.model.home.FoodList
 import com.awizhe.domain.repository.CacheStrategy
-import com.awizhe.domain.repository.food.FoodRepository
+import com.awizhe.domain.repository.home.FoodRepository
 import io.reactivex.Single
 import javax.inject.Inject
 

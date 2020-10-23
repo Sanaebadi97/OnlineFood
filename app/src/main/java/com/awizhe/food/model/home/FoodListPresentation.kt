@@ -1,4 +1,4 @@
-package com.awizhe.food.model.food
+package com.awizhe.food.model.home
 
 import com.awizhe.food.model.base.PresentationModel
 

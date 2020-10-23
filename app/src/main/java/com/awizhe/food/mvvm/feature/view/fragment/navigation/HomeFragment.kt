@@ -7,20 +7,30 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.awizhe.food.databinding.FragmentHomeBinding
-import com.awizhe.food.model.SliderItem
-import com.awizhe.food.mvvm.feature.view.adapter.SliderAdapter
+import com.awizhe.food.model.home.SliderItem
+import com.awizhe.food.mvvm.feature.view.adapter.home.FoodAdapter
+import com.awizhe.food.mvvm.feature.view.adapter.home.SliderAdapter
+import com.awizhe.food.mvvm.feature.view.adapter.home.mOnItemClickListener
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
 import dagger.android.support.DaggerFragment
+import javax.inject.Inject
 
 
-class HomeFragment : DaggerFragment() {
+class HomeFragment : DaggerFragment() , mOnItemClickListener{
+
+    private lateinit var adapter: FoodAdapter
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var sliderAdapter: SliderAdapter
     private val sliderItemList: MutableList<SliderItem> = ArrayList()
+
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -90,5 +100,9 @@ class HomeFragment : DaggerFragment() {
         )
 
         return sliderItemList
+    }
+
+    override fun onItemClick() {
+        TODO("Not yet implemented")
     }
 }
