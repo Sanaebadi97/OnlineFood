@@ -28,6 +28,8 @@
     <string name="contact_us">ارتباط با ما</string>
     <string name="rate_us">امتیاز دهی</string>
     <string name="share_app">به اشتراک گذاری</string>
+    <string name="no_message_yet">هنوز پیامی ندارید !</string>
+    <string name="make_your_ticket">تیکت خود را بسازید</string>
 
 
 </resources>
