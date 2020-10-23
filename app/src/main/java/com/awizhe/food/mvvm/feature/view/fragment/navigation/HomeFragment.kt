@@ -64,6 +64,7 @@ class HomeFragment : DaggerFragment(), mOnItemClickListener {
         if (requireContext().isOnline()) viewModel.getUserList() else showError(getString(R.string.check_internet))
 
         setUpObserver()
+
     }
 
     private fun setUpRecyclerview() {
