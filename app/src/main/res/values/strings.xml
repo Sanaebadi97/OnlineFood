@@ -22,7 +22,7 @@
 
     <string name="check_internet">خطا در اتصال به سرور ! لطفا شبکه ی اینترنت خود را بررسی کنید.</string>
 
-    <string name="user_list_error">خطا در در دریافت اطلاعات . دوباره تلاش کنید.</string>
+    <string name="user_list_error">دیتای دریافتی خالی است.</string>
     <string name="error_fetching_data">خطا در دریافت اطلاعات</string>
 
 

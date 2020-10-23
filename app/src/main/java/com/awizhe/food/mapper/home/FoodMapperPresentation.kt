@@ -15,16 +15,28 @@ class FoodMapperPresentation @Inject constructor() :
     }
 
     override fun toPresentation(d: Food): FoodPresentation {
+//        return FoodPresentation(
+//            d.fooddiscount,
+//            d.featured,
+//            d.foodname,
+//            d.foodimage,
+//            d.foodenable,
+//            d.foodprice,
+//            d.fooddesc,
+//            d.id,
+//            d.category
+//        )
+
         return FoodPresentation(
-            d.fooddiscount,
-            d.featured,
-            d.foodname,
-            d.foodimage,
-            d.foodenable,
-            d.foodprice,
-            d.fooddesc,
-            d.id,
-            d.category
+            "5",
+            "JHUJHN",
+            "OIJIKUHJIKUH",
+            "https://i.stack.imgur.com/fCjAE.jpg?s=32&g=1",
+            "KIIJNJHNK",
+            "35$",
+            "IJIKaduhsufehru",
+            "85",
+            "kjnjkncs"
         )
     }
 
