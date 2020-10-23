@@ -2,6 +2,8 @@ package com.awizhe.food.di
 
 import android.content.Context
 import com.awizhe.data.executor.JobExecutor
+import com.awizhe.data.repository.dataSource.food.FoodDataRepository
+import com.awizhe.domain.repository.home.FoodRepository
 import com.awizhe.food.executors.UIThread
 import com.awizhe.food.global.FoodApplication
 import com.awizhe.food.util.AppSchedulerProvider
@@ -37,11 +39,11 @@ class ApplicationModule {
         return uiThread
     }
 
-//    @Provides
-//    @Singleton
-//    fun providePlaceRepository(placeDataRepository: PlaceDataRepository): PlaceRepository {
-//        return placeDataRepository
-//    }
+    @Provides
+    @Singleton
+    fun provideFoodRepository(foodDataRepository: FoodDataRepository): FoodRepository {
+        return foodDataRepository
+    }
 
 
     @Provides
