@@ -1,6 +1,8 @@
 package com.awizhe.food.util
 
 import android.app.Activity
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -38,3 +40,6 @@ val Activity.foodApplication: FoodApplication
 
 val Fragment.foodApplication: FoodApplication
     get() = activity?.application as FoodApplication
+
+fun Context.isOnline() = (getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?)
+    ?.activeNetworkInfo?.isConnectedOrConnecting ?: false

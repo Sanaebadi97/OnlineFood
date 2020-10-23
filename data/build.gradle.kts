@@ -25,11 +25,11 @@ android {
         }
     }
 
-    flavorDimensions ("PlaceApp")
+    flavorDimensions ("OnlineFood")
     productFlavors {
-        create("tapsi") {
-            setDimension("PlaceApp")
-            buildConfigField("String", "API_BASE_URL", "\"http://tapsi.docker.webdooz.com/api/v1/\"")
+        create("onlineFood") {
+            setDimension("OnlineFood")
+            buildConfigField("String", "API_BASE_URL", "\"http://food.awizhe.com/\"")
         }
 
     }
