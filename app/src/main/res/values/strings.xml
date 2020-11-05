@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">AwizheFood</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="favorite">موردعلاقه</string>
     <string name="menu">پیام ها</string>
     <string name="profile">پروفایل</string>
@@ -24,12 +23,9 @@
 
     <string name="user_list_error">دیتای دریافتی خالی است.</string>
     <string name="error_fetching_data">خطا در دریافت اطلاعات</string>
-    <string name="about_us">درباره ما</string>
-    <string name="contact_us">ارتباط با ما</string>
-    <string name="rate_us">امتیاز دهی</string>
-    <string name="share_app">به اشتراک گذاری</string>
     <string name="no_message_yet">هنوز پیامی ندارید !</string>
     <string name="make_your_ticket">تیکت خود را بسازید</string>
+    <string name="no_bookmark_found">مورد علاقه ایی یافت نشد .</string>
 
 
 </resources>
