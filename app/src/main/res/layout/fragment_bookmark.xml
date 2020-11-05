@@ -12,4 +12,17 @@
         tools:listitem="@layout/bookmark_item"
         />
 
+    <TextView
+        android:id="@+id/text_no_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/iransans_bold"
+        android:gravity="center"
+        android:text="@string/no_bookmark_found"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_huge" />
+
+
+
 </FrameLayout>
